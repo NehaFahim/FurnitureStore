@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { RxLockClosed } from 'react-icons/rx';
-import { IoIosCloseCircle } from 'react-icons/io';
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { LockFill, XCircleFill, Facebook, Linkedin, Twitter } from 'react-bootstrap-icons'
+
 
 const ProductDetail = () => {
   const [showCartBox, setShowCartBox] = useState(false);
@@ -150,14 +149,14 @@ const ProductDetail = () => {
 
 
   <div className="absolute top-[10px] mt-12 left-[160%] sm:left-[160%] md:left-[160%] lg:left-[160%px] w-[16.63px] h-[19px] flex items-center justify-center">
-  <RxLockClosed size={16.63} color="#9F9F9F" />
+  <LockFill size={16.63} color="#9F9F9F" />
 </div>
 
 <button
   className="absolute top-[190px] left-[160%] sm:left-[167%] lg:left-[167%] w-[20px] h-[20px] text-[#9F9F9F] flex items-center justify-center"
   onClick={() => setShowCartBox(false)}
 >
-  <IoIosCloseCircle size={20} />
+  <XCircleFill size={20} />
 </button>
     <div className=" w-[130px] h-[56px] text-[#000000] ">
   <p className="font-medium mt-48 -ml-9 text-[16px] ">
@@ -239,13 +238,13 @@ Rs. 250,000.00
           <p className="text-gray-600">Share <span className="px-6">:</span></p>
           <div className="flex gap-6 -ml-4  text-lg">
             <a href="#" className="hover:text-gray-800">
-              <FaFacebook/>
+              <Facebook/>
             </a>
             <a href="#" className="hover:text-gray-800">
-               <FaLinkedin/>
+               <Linkedin/>
             </a>
             <a href="#" className="hover:text-gray-800">
-               <FaTwitter/>
+               <Twitter/>
             </a>
           </div>
         </div>

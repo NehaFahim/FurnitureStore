@@ -1,10 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { FaSearch } from 'react-icons/fa';
-import { FaCalendar} from 'react-icons/fa6';
-import { FaTag} from 'react-icons/fa6';
-import { FaUser } from 'react-icons/fa6';
-
+import { User, Search, Calendar, Tag } from 'lucide-react';
 
 
 export default function Blogging() {
@@ -24,15 +20,15 @@ export default function Blogging() {
           <div className=" mt-6">
             <div className="flex items-center space-x-9 text-sm w-[349px] h-[24px] text-[#9F9F9F]">
               <span className="flex items-center">
-               <FaUser/>
+               <User/>
                 <i className="mr-1"></i> Admin
               </span>
               <span className="flex items-center">
-               <FaCalendar/>
+               <Calendar/>
                 <i className="mr-1"></i> 14 Oct 2022
               </span>
               <span className="flex items-center">
-               <FaTag/>
+               <Tag/>
                 <i className="mr-1"></i> Wood
               </span>
             </div>
@@ -58,15 +54,15 @@ export default function Blogging() {
           <div className="mt-6">
           <div className="flex items-center space-x-9 text-sm w-[349px] h-[24px] text-[#9F9F9F]">
               <span className="flex items-center">
-               <FaUser/>
+               <User/>
                 <i className="mr-1"></i> Admin
               </span>
               <span className="flex items-center">
-               <FaCalendar/>
+               <Calendar/>
                 <i className="mr-1"></i> 14 Oct 2022
               </span>
               <span className="flex items-center">
-               <FaTag/>
+               <Tag/>
                 <i className="mr-1"></i> Wood
               </span>
             </div>
@@ -92,15 +88,15 @@ export default function Blogging() {
           <div className="mt-6">
           <div className="flex items-center space-x-9 text-sm w-[349px] h-[24px] text-[#9F9F9F]">
               <span className="flex items-center">
-               <FaUser/>
+               <User/>
                 <i className="mr-1"></i> Admin
               </span>
               <span className="flex items-center">
-               <FaCalendar/>
+               <Calendar/>
                 <i className="mr-1"></i> 14 Oct 2022
               </span>
               <span className="flex items-center">
-               <FaTag/>
+               <Tag/>
                 <i className="mr-1"></i> Wood
               </span>
             </div>
@@ -119,7 +115,7 @@ export default function Blogging() {
         {/* Search Bar */}
         <div className="mb-8 w-[311px] h-[58px] ">
         <button className="text-[#9F9F9F] absolute left-72 mt-3">
-            <FaSearch/>
+            <Search/>
         </button>
           <input
             type="text"
