@@ -1,6 +1,7 @@
 import { Clock } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import React from "react";
+import Image from 'next/image';
 
 const BlogSection = () => {
   const blogs = [
@@ -37,9 +38,11 @@ const BlogSection = () => {
               key={index}
               className="bg-white  overflow-hidden"
             >
-              <img
+              <Image
                 src={blog.image}
                 alt={blog.title}
+                width={300}
+                height={200}
                 className="w-[393px] h-[393px] object-cover"
               />
               <div className="p-4">

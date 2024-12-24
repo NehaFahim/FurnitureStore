@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface Product {
   id: number;
@@ -44,9 +45,11 @@ const TopPicks: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-28 pl-28 hover">
         {products.map((product) => (
           <div key={product.id} className=" w-[287px] h-[397px]">
-            <img
+            <Image
               src={product.image}
               alt={product.name}
+              width={287}
+              height={397}
               className="w-[287px] h-[287px] object-contain mb-4"
             />
             <h2 className="text-sm font-normal w-[212px] h-[48px] text-black pr-14 ">{product.name}</h2>

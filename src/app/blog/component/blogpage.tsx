@@ -1,5 +1,6 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa6";
+import Image from "next/image";
 
 const Blogpage = () => {
   return (
@@ -10,9 +11,11 @@ const Blogpage = () => {
       }}
     >
          <div>
-        <img
+        <Image
           src="/Meubel House_Logos-05.png"
           alt="Sofa"
+          width={100}
+          height={100}
           className="w-[77px] h-[77px] mt-20 absolute left-1/2  top-20 ml-16 "
         />
 

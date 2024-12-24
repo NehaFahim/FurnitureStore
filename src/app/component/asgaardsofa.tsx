@@ -1,14 +1,16 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const AsgaardSofa: React.FC = () => {
   return (
     <section className="flex  items-center justify-between bg-[#fff9eb] m-2  pl-40 w-[1440px] h-[672px]">
       {/* Sofa Image Section */}
       <div className="translate -translate-x-24">
-        <img
+        <Image
           src="/Asgaard sofa 1.png" 
           alt="Asgaard Sofa"
+          width={800} height={600}
           className="w-[983px] h-[799px] rounded-lg"
         />
       </div>

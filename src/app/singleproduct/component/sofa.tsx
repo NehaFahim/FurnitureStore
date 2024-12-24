@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { LockFill, XCircleFill, Facebook, Linkedin, Twitter } from 'react-bootstrap-icons'
+import Image from "next/image";
 
 
 const ProductDetail = () => {
@@ -19,32 +20,42 @@ const ProductDetail = () => {
           <div className="flex lg:flex-row gap-8 w-[553px] h-[500px]">
             <div className="flex flex-col space-y-6 w-[76px] h-[416px] ">
             
-              <img
+              <Image
                 src="/Asgaard sofa 1.png"
                 alt="Thumbnail 1"
+                width={76}
+                height={80}
                 className="w-[76px] h-[80px] rounded-lg cursor-pointer hover:ring-2 hover:ring-gray-400 bg-[#FFF9E5]"
               />
-              <img
+              <Image
                 src="/Group 94.png"
                 alt="Thumbnail 2"
+                width={76}
+                height={80}
                 className="w-[76px] h-[80px] rounded-lg cursor-pointer hover:ring-2 hover:ring-gray-400 bg-[#FFF9E5]"
               />
-              <img
+              <Image
                 src="/Mask group (1).png"
                 alt="Thumbnail 3"
+                width={76}
+                height={80}
                 className="w-[76px] h-[80px] rounded-lg cursor-pointer hover:ring-2 hover:ring-gray-400 bg-[#FFF9E5]"
               />
-              <img
+              <Image
                 src="/Mask group (2).png"
                 alt="Thumbnail 4"
+                width={76}
+                height={80}
                 className="w-[76px] h-[80px] rounded-lg cursor-pointer hover:ring-2 hover:ring-gray-400 bg-[#FFF9E5]"
               />
             </div>
      
             <div className=" bg-[#FFF9E5] rounded-xl flex items-center justify-center  w-[423px] h-[500px]">
-              <img
+              <Image
                 src="/Asgaard sofa 1.png"
                 alt="Product Image"
+                width={423}
+                height={500}
                 className="w-[481px] h-[391px] object-cover rounded-lg"
               />
             </div>
@@ -142,7 +153,10 @@ const ProductDetail = () => {
     <h2 className='mt-24'>Shopping Cart</h2>
     <div className="absolute top-[150%] mt-14 left-[8] w-[287px] border-t-[1px] border-[#D9D9D9]">
     <div className="top-[132px] pt-[30px]  mt-8 pr-4 left-[1050px] w-[108px] h-[105px] ">
-  <img src="/Asgaard sofa 1.png" alt="Picture" className=" w-[105px] h-[105px]   bg-[#FBEBB5]" />
+  <Image src="/Asgaard sofa 1.png" alt="Picture"  
+  width={105}
+  height={105}
+  className=" w-[105px] h-[105px]   bg-[#FBEBB5]" />
 </div>
   </div>
   </div>

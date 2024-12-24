@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
@@ -16,9 +17,11 @@ const HeroSection: React.FC = () => {
       </div>
    
       <div className="mb-10 ">
-        <img
+        <Image
           src="/seater.png" 
           alt="Rocket single seater chair"
+          width={800}
+         height={700}
         />
       </div>
     </div>
