@@ -37,9 +37,9 @@ const ProductGrid: React.FC = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
-  const handlePrevPage = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
+  // const handlePage = () => {
+  //   if (currentPage > 1) setCurrentPage(currentPage - 1);
+  // };
 
   const handlePageChange = (page: number) => setCurrentPage(page);
 

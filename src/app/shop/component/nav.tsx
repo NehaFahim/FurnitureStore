@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
 
      {/* NAVBAR code */}
      
-        <a href="/" className="hover:text-gray-600">
+        <a href="" className="hover:text-gray-600">
           Home
         </a>
         <a href="/shop" className="hover:text-gray-600">

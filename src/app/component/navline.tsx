@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <header  className="flex justify-between items-center    w-[1440px] h-[100px] bg-[#FBEBB5] ">
     <section className="flex justify-end  gap-16  font-medium text-[16px] w-[430px] h-[24px] absolute right-72 ">
-        <a href="/" className="text-black font-medium text-[16px] mr-4">
+        <a href="" className="text-black font-medium text-[16px] mr-4">
           Home
         </a>
         <a href="/shop" className="text-black font-medium text-[16px] mr-4">
