@@ -1,5 +1,6 @@
 import React from "react";
-import { FaChevronRight } from "react-icons/fa6";
+// import { FaChevronRight } from "react-icons/fa6";
+import { ChevronRight } from 'lucide-react';
 import Image from "next/image";
 
 const Highlight2 = () => {
@@ -25,7 +26,7 @@ const Highlight2 = () => {
                </h2>
                <div className="text-black flex items-center space-x-2 pl-24 mt-24">
                      <p className="font-medium text-[16px]">Home</p>
-                     <FaChevronRight  />
+                     <ChevronRight  />
                      <p className="font-normal text-[16px]">Contact</p>
                    </div>
          

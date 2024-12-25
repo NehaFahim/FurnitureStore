@@ -1,6 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { LockFill, XCircleFill, Facebook, Linkedin, Twitter } from 'react-bootstrap-icons'
+import { LockFill} from 'react-bootstrap-icons'
+import { XCircleFill} from 'react-bootstrap-icons'
+import { Facebook} from 'react-bootstrap-icons'
+import { Linkedin } from 'react-bootstrap-icons'
+import { Twitter } from 'react-bootstrap-icons'
 import Image from "next/image";
 
 

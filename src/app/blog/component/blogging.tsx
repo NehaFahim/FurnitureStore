@@ -1,6 +1,9 @@
 'use client';
 import Image from 'next/image';
-import { User, Search, Calendar, Tag } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Tag } from 'lucide-react';
 
 
 export default function Blogging() {
