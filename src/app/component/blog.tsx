@@ -26,13 +26,13 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-white w-[1440px] h-[944px]">
-      <div className="container mx-auto text-center pl-12 w-[1240px] h-[679px]">
+    <section className="py-12 bg-white w-full h-auto">
+      <div className="container mx-auto text-center  w-full h-auto">
         <h2 className="text-3xl font-medium mb-2 pl-8">Our Blogs</h2>
         <p className="text-[#9F9F9F] mb-8 pl-6">
           Find a bright idea to suit your taste with our great selection
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[1240px] h-[555px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full h-auto">
           {blogs.map((blog, index) => (
             <div
               key={index}
@@ -46,11 +46,11 @@ const BlogSection = () => {
                 className="w-[393px] h-[393px] object-cover"
               />
               <div className="p-4">
-                <h2 className="text-lg font-normal w-[339px] h-[30px] pl-4">{blog.title}</h2>
-                <button className="text-black font-medium text-lg underline underline-offset-8 w-[130px] h-[36px] mt-2">
+                <h2 className="text-lg font-normal w-[339px] h-[30px] ">{blog.title}</h2>
+                <button className="text-black font-medium text-lg underline underline-offset-8 w-[130px] h-[36px] mt-2 pr-8">
                   Read More
                 </button>
-                <div className="flex items-center justify-center text-black space-x-4 text-sm font-normal">
+                <div className="flex items-center justify-center text-black space-x-4 text-sm font-normal pr-8">
                   <div className="flex items-center mt-4 mb-4 font-light">
                     <Clock className="mr-1 w-[18px] h-[17.83px] font-medium" />
                     {blog.readTime}

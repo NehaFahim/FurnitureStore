@@ -1,71 +1,106 @@
+"use client";
+
+import { Product } from "../../../../types/products";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
+import { getCartItems, removeFromCart } from "@/app/context/cart";
 import Link from "next/link";
+import { DeleteIcon } from "lucide-react";
 
-const Page = () => {
+const CartPage = () => {
+  const [cartItems, setCartItems] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const uniqueItems = [...new Map(getCartItems().map(item => [item._id, item])).values()];
+    setCartItems(uniqueItems);
+  }, []);
+
+  const handleRemove = (id: string) => {
+    removeFromCart(id);
+    setCartItems(prevItems => prevItems.filter(item => item._id !== id));
+  };
+
+  const calculateTotal = () => {
+    return cartItems.reduce((total, item) => total + item.price * (item.quantity || 1), 0);
+  };
+
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-center items-center p-4 w-[1440px] h-[525px] pl-28">
-      <div className=" max-w-5xl w-[1240px] h-[390px]">
-        {/* Cart Table */}
-        <div className=" p-4 rounded-md border border-black w-[840px] h-[55px] bg-[#FFF9E5] m-14 absolute left-28 text-center">
-          <div className="grid grid-cols-4 gap-4 text-black font-medium text-[16px]  mb-2 ">
-            <div>Product</div>
-            <div>Price</div>
-            <div>Quantity</div>
-            <div>Subtotal</div>
-          </div>
-          </div>
-          <div className="grid grid-cols-4 gap-4 items-center  py-4 absolute -bottom-36 left-44">
-            <div className="flex items-center gap-4 w-[817px] h-[216px]">
-              <Image
-                src="/Mask group (1).png"
-                alt="Asgaard Sofa"
-                width={80}
-                height={80}
-                className="rounded-md bg-[#FBEBB5] w-[106px] h-[106px]"
-              />
-              <span className="text-[#9F9F9F] font-normal text-[16px] w-[108px] h-[24px]">Asgaard Sofa</span>
-            </div>
-            <div className="text-[#9F9F9F] font-normal text-[16px] w-[112px] h-[24px]">Rs. 250,000.00</div>
-            <div className="absolute left-1/3 pl-24">
-              <input
-                type="number"
-                defaultValue={1}
-                className="border border-bg[#9F9F9F] rounded-lg text-center w-[32px] h-[32px]"
-              />
-            </div>
-            <div className="text-black font-normal text-[16px]">Rs. 250,000.00</div>
-          </div>
-          <button>
-      <Image
-        src="/deleteicon.png" 
-        alt="Delete Icon"
-        width={24} 
-        height={24}
-        className="cursor-pointer hover:opacity-80 absolute -bottom-8 right-96"
-      />
-    </button>
+    <div className="p-6 md:p-12 lg:p-24 bg-white w-full h-auto">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-800 text-center pb-6 md:pb-12">
+        🛒 Your Shopping Cart
+      </h1>
+
+      <div className="flex flex-col md:flex-row w-full h-auto gap-6">
+        <div className="w-full md:w-3/4 overflow-x-auto">
+          <table className="w-full border border-gray-300 text-sm md:text-base">
+            <thead>
+              <tr className="bg-yellow-100 text-center">
+                <th className="p-2 md:p-3 border">Product</th>
+                <th className="p-2 md:p-3 border">Price</th>
+                <th className="p-2 md:p-3 border">Quantity</th>
+                <th className="p-2 md:p-3 border">Subtotal</th>
+                <th className="p-2 md:p-3 border">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartItems.length > 0 ? (
+                cartItems.map((item, index) => (
+                  <tr key={item._id || index} className="text-center border-b">
+                    <td className="p-2 md:p-3 flex items-center gap-4">
+                      {item.image && (
+                        <Image
+                          src={urlFor(item.image).url()}
+                          className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-lg"
+                          alt="product image"
+                          width={80}
+                          height={80}
+                        />
+                      )}
+                      {item.productName}
+                    </td>
+                    <td className="p-2 md:p-3">Rs. {item.price.toLocaleString()}</td>
+                    <td className="p-2 md:p-3">{item.quantity || 1}</td>
+                    <td className="p-2 md:p-3">Rs. {(item.price * (item.quantity || 1)).toLocaleString()}</td>
+                    <td className="p-2 md:p-3">
+                      <button onClick={() => handleRemove(item._id)} className="text-red-500 text-lg md:text-xl">
+                        <DeleteIcon />
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={5} className="text-gray-600 text-center p-4">
+                    Your cart is empty
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
 
-        {/* Cart Totals */}
-        <div className="mt-8 flex justify-end ml-96 pl-36 mb-48 ">
-          <div className="bg-[#FFF9E5] p-6 rounded-md w-[393px] h-[390px] ml-96 ">
-            <h2 className=" mb-4 w-[179px] h-[48px] font-bold text-[32px] ml-24">Cart Totals</h2>
-            <div className="flex justify-between mb-12">
-              <span className="text-black w-[69px] h-[24px] font-medium text-[16px] mt-10 ml-14">Subtotal</span>
-              <span className="text-gray-400 mt-10 mr-12">Rs. 250,000.00</span>
-            </div>
-            <div className="flex justify-between mb-4">
-              <span className="text-gray-700 font-bold ml-14">Total</span>
-              <span className="text-yellow-600 font-bold mr-12">Rs. 250,000.00</span>
-            </div>
-            <button className="w-[222px] h-[58.95px] py-2 bg-[#FFF9E5] text-black border border-black rounded-2xl font-normal text-[20px] ml-16 mt-8 hover:bg-black hover:text-white transition">
-              <Link href={"/checkout"}>Check Out</Link>
-            </button>
-          </div>
-        </div>
+        {cartItems.length > 0 && (
+  <div className="w-full md:w-1/3 bg-gradient-to-b from-yellow-100 to-yellow-100 p-6 md:p-8 rounded-2xl shadow-xl border border-yellow-100">
+    <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-800 mb-6 text-center">
+       Cart Totals
+    </h2>
+    <p className="text-gray-700 font-medium mb-4 md:mb-6 text-lg md:text-xl text-center">
+      Subtotal: <span className="font-semibold text-gray-900">Rs. {calculateTotal().toLocaleString()}</span>
+    </p>
+    <p className="text-lg md:text-xl font-semibold text-yellow-700 text-center mt-10 border-t border-yellow-400 pt-4">
+      Total: <span className="text-2xl md:text-3xl font-bold text-yellow-900">Rs. {calculateTotal().toLocaleString()}</span>
+    </p>
+    <Link href="/checkout">
+      <button className="mt-16 w-full px-5 py-3 md:py-4 bg-green-500 text-white text-base md:text-lg font-semibold rounded-xl shadow-md hover:bg-green-600 hover:scale-105 transition-all duration-300 ease-in-out">
+        Proceed to Checkout 
+      </button>
+    </Link>
+  </div>
+)}
       </div>
-    
+    </div>
   );
 };
 
-export default Page;
+export default CartPage;

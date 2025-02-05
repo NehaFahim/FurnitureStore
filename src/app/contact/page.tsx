@@ -9,7 +9,7 @@ import Footer from '../component/footer'
 
 const Contact = () => {
   return (
-    <div>
+    <div className=' w-full h-auto'>
         <Nav/>
         <Highlight2/>
         <ContactPage/>

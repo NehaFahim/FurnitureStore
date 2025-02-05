@@ -1,17 +1,17 @@
 import React from 'react'
 import Nav from './component/nav'
 import Shoppage from './component/shoppage'
-import Bar from './component/bar'
 import ProductGrid from './component/product'
 import Features from './component/features'
 import Footer from '../component/footer'
+// import Bar from './component/bar'
 
 const Page = () => {
   return (
-    <div>
+    <div className='w-full h-auto'>
         <Nav/>
         <Shoppage/>
-        <Bar/>
+        {/* <Bar/> */}
         <ProductGrid/>
         <Features/>
         <Footer/>
@@ -22,3 +22,12 @@ const Page = () => {
 }
 
 export default Page
+
+
+
+
+
+
+
+
+

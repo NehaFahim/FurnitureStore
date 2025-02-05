@@ -5,7 +5,7 @@ import Blogging from './component/blogging'
 
 const Blog = () => {
   return (
-    <div>
+    <div className=' w-full h-auto'>
         <Nav/>
         <Blogpage/>
         <Blogging/>

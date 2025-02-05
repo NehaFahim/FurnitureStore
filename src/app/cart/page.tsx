@@ -8,7 +8,7 @@ import Features from '../shop/component/features'
 
 const Cartpage = () => {
   return (
-    <div>
+    <div className='w-full h-auto'>
         <Nav/>
         <Highlight2/>
         <Page/>

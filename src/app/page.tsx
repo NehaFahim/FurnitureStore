@@ -7,11 +7,15 @@ import AsgaardSofa from './component/asgaardsofa'
 import BlogSection from './component/blog'
 import InstagramSection from './component/insta'
 import Footer from './component/footer'
+import Head from 'next/head'
 
 
  const Page = () => {
   return (
-    <div>
+    <div className='w-full h-auto'>
+      <Head>
+        <meta name="Furniture store" content="This my E-commerce website." />
+      </Head>
       <Header/>
       <HeroSection/>
 
@@ -32,3 +36,5 @@ import Footer from './component/footer'
 }
 
 export default Page;
+
+

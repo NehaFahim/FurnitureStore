@@ -9,7 +9,7 @@ import Footer from '../component/footer'
 
 const Accountpage = () => {
   return (
-    <div>
+    <div className='w-full h-auto'>
         <Nav/>
         <Firstpage/>
         <Login/>

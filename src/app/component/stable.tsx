@@ -3,44 +3,44 @@ import Image from "next/image";
 
 const Sidetableandsofa: React.FC = () => {
   return (
-    <div className="flex justify-center items-center gap-16 bg-[#FAF4F4]  w-[1440px] h-[672px]">
-      {/* Side Table */}
-      <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-32 bg-[#FAF4F4] w-full h-auto py-20">
+      {/* Side Table Section */}
+      <div className="flex flex-col items-center text-center w-[350px] lg:w-[550px]">
         <Image
-          src="/stable.png" 
+          src="/stable.png"
           alt="Side Table"
-          width={200}
-          height={200}
-          className="w-[605px] h-[562px] object-cover"
+          width={450}
+          height={450}
+          className="w-full h-auto object-contain"
         />
-        <h1 className="mt-96 text-4xl font-medium text-black w-[182px] h-[54px] absolute left-44">Side table</h1>
-        <button
-          className="mt-96 p-14  text-lg font-medium text-black underline underline-offset-4 absolute left-32  "
-        >
-          View More
-        </button>
+        <div className="mb-14"> {/* Proper spacing added */}
+          <h1 className="text-4xl font-medium text-black -mt-28 mr-40">Side table</h1>
+          <br />
+          <button className="text-lg font-medium text-black underline underline-offset-4 hover:text-gray-700 mr-56">
+            View More
+          </button>
+        </div>
       </div>
 
-    
-      <div className="flex flex-col items-center text-center">
+      {/* Sofa Section */}
+      <div className="flex flex-col items-center text-center w-[350px] lg:w-[600px]">
         <Image
-          src="/cloudsofa.png" 
+          src="/cloudsofa.png"
           alt="Sofa"
-          width={200}
-          height={200}
-          className="w-[605px] h-[562px] object-cover"
+          width={450}
+          height={450}
+          className="w-full h-auto object-contain"
         />
-        <h1 className="mt-96 text-4xl font-medium text-black w-[182px] h-[54px] absolute right-80">Side table</h1>
-        <button
-          className="mt-96 p-14 text-lg font-medium text-black underline underline-offset-4 absolute right-80 mr-7"
-        >
-          View More
-        </button>
+        <div className="mb-14"> {/* Proper spacing added */}
+          <h1 className="text-4xl font-medium text-black -mt-28 mr-40">Side table</h1>
+          <br />
+          <button className="text-lg font-medium text-black underline underline-offset-4 hover:text-gray-700 mr-56">
+            View More
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Sidetableandsofa;
-
-

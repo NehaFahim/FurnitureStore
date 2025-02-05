@@ -1,30 +1,32 @@
+
+
+
 import React from "react";
 import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
-   <div>
-    <div  className="flex flex-col items-center justify-center px-6 md:px-20 lg:flex-row lg:justify-between w-[1440px] h-[672px] bg-[#FBEBB5] ">
-    
-    
-      <div className="text-center lg:text-left m-24 space-y-4  w-[440px] h-[276px] ">
-        <h1 className="text-5xl font-medium text-black leading-tight mb-24 pl-32  w-[440px] h-[192px] ">
+    <div className="w-full h-auto bg-[#FBEBB5] flex flex-col lg:flex-row-reverse items-center justify-between  py-4 lg:gap-4 lg:pr-20 lg:pl-24 -mt-12">
+      {/* Image Section */}
+      <div className="w-full h-auto lg:w-screen  flex justify-center">
+        <Image
+          src="/seater.png"
+          alt="Rocket single seater chair"
+          width={853} 
+          height={1000} 
+          className="max-w-full h-auto "
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className="w-full  text-center lg:text-left space-y-8 -mt-12 ">
+        <h1 className="text-[50px] font-medium text-black leading-[1.2] max-w-[450px] ml-24">
           Rocket single <br /> seater
         </h1>
-        <button className="m-28 font-medium w-[121px] h-[49px] text-lg text-black underline  hover:text-gray-800 absolute bottom-36">
+        <button className="font-medium text-lg text-black underline hover:text-gray-800 ml-24">
           Shop Now
         </button>
       </div>
-   
-      <div className="mb-10 ">
-        <Image
-          src="/seater.png" 
-          alt="Rocket single seater chair"
-          width={800}
-         height={700}
-        />
-      </div>
-    </div>
     </div>
   );
 };
