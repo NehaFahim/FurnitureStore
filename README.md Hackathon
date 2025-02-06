@@ -1,0 +1,78 @@
+# 🚀 Marketplace Builder Hackathon 2025  
+
+This repository documents my journey through the **Marketplace Builder Hackathon 2025**, where I built a **fully functional e-commerce marketplace**. Below is a detailed breakdown of each day's progress, covering everything from planning and development to deployment and post-launch practices.  
+
+---
+
+## 📅 **Project Timeline**  
+
+### 🏗️ **Day 1: Laying the Foundation for Your Marketplace Journey**  
+- Defined the **marketplace concept** and business goals.  
+- Researched **e-commerce best practices** and competitor analysis.  
+- Set up the **GitHub repository** and project roadmap.  
+
+---
+
+### 🛠️ **Day 2: Planning the Technical Foundation**  
+- Selected **Next.js** as the framework for the frontend.  
+- Integrated **Tailwind CSS** for a scalable UI design.  
+- Chose **Sanity CMS** for dynamic product and content management.  
+- Designed the **database schema** and structured API endpoints.  
+
+---
+
+### 🔗 **Day 3: API Integration and Data Migration**  
+- Set up **Sanity CMS schemas** for products, categories, and orders.  
+- Fetched **dynamic content** using Sanity’s API.  
+- Optimized **API calls** for better performance and reduced load times.  
+
+---
+
+### 🎨 **Day 4: Building Dynamic Frontend Components for Your Marketplace**  
+- Developed **homepage, product pages, and category filtering UI**.  
+- Implemented **reusable and modular components** using React.  
+- Designed an **interactive and responsive layout** with Tailwind CSS.  
+
+---
+
+### 🛡️ **Day 5: Testing, Error Handling, and Backend Integration Refinement**  
+- Conducted **Lighthouse performance tests** for SEO, speed, and accessibility.  
+- Implemented **error handling in API requests** to prevent crashes.  
+- Refined backend integration for **faster and smoother data fetching**.  
+
+---
+
+### 🚀 **Day 6: Deployment Preparation and Staging Environment Setup**  
+- **Deployed the marketplace on Vercel** for a fast and scalable hosting solution.  
+- Created a **staging environment** to test features before the final launch.  
+- Ensured **API stability and data synchronization** with Sanity CMS.  
+
+---
+
+### 🎯 **Day 7: Live Deployment and Post-Launch Practices**  
+- Successfully **launched the marketplace website**.  
+- Performed **cross-browser testing and mobile optimization**.  
+- Monitored **real-time analytics** to track performance and user engagement.  
+- Planned future **updates and improvements** based on feedback.  
+
+---
+
+## 🛠️ **Tech Stack**  
+- **Frontend:** Next.js, Tailwind CSS  
+- **CMS:** Sanity  
+- **Hosting:** Vercel  
+- **Performance Testing:** Lighthouse  
+
+---
+
+## 🌍 **Live Website & Repository**  
+🔗 **Live Website:** https://furniture-store-puce.vercel.app/  
+📂 **Repository:** https://github.com/NehaFahim/FurnitureStore.git
+
+---
+
+## 📢 Want to contribute or provide feedback?  
+Feel free to **open an issue** or **suggest improvements**! 🚀  
+
+### 🔖 Tags  
+`#Hackathon` `#Ecommerce` `#WebDevelopment` `#NextJS` `#SanityCMS` `#Vercel` `#Deployment` `#TailwindCSS` `#Marketplace`  
